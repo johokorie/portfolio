@@ -8,7 +8,7 @@ A simple portfolio template for Computer Science  professionals built with React
 
 **Install the git repo**
 
-<pre>git clone https://github.com/helloojohn/portfolio.git</pre>
+<pre>git clone https://github.com/johokorie/portfolio.git</pre>
 
 **Install yarn**
 

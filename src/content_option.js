@@ -1,24 +1,23 @@
-const logotext = "{ / JOHN / }";
+const logotext = " JOHN ";
 const meta = {
 	title: "John",
 	description:
-		"I'm John aka Panda, a self-taught Frontend developer and technology enthuist.",
+		"I'm John aka Panda, a passionate Frontend developer and technology enthuist.",
 };
 
 const introdata = {
 	title: "Hi 👋, I'm John",
 	animated: {
-		first: "Frontend Developer",
+		first: "Software Developer (Frontend)",
 		second: "Visionary",
 		third: "Problem-solver",
-		fourth: "Programmer",
+		fourth: "Technologist",
 		fifth: "Curious",
-		sixth: "Technologist",
 		// add more if you'd like but make sure to update /src/pages/home/index.js Line 29
 	},
 	description:
-		"A self-taught and passionate developer with a flair for creating dynamic, user-friendly interfaces.",
-	your_img_url: "https://i.ibb.co/wRjcnGL/me.jpg",
+		"Currently focused on building the future of web with modern technologies.",
+	your_img_url: "https://i.ibb.co/wRjcnGL/mlike React, TypeScript, and Tailwind CSS.e.jpg",
 };
 
 const dataabout = {
@@ -100,74 +99,29 @@ const skills = [
 		name: "Netlify",
 	},
 	{
-		name: "Vercel",
-	},
-	{
 		name: "GCP",
 	},
 ];
 
-const dataportfolio = [{
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/800/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/600/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/300/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/700/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-
-    {
-        img: "https://picsum.photos/400/600/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/300/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/550/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
-    {
-        img: "https://picsum.photos/400/700/?grayscale",
-        description: "The wisdom of life consists in the elimination of non-essentials.",
-        link: "#",
-    },
+const dataportfolio = [
+	{
+		img: "https://ibb.co/CBnrqGs",
+		description:
+			"Bridge is a modern platform that provide insights to optimize your financial strategy",
+		link: "#",
+	},
+	{
+		img: "https://picsum.photos/800/?grayscale",
+		description:
+			"The wisdom of life consists in the elimination of non-essentials.",
+		link: "#",
+	},
+	{
+		img: "https://picsum.photos/800/?grayscale",
+		description:
+			"The wisdom of life consists in the elimination of non-essentials.",
+		link: "#",
+	},
 ];
 
 const contactConfig = {
@@ -181,9 +135,9 @@ const contactConfig = {
 };
 
 const socialprofils = {
-    github: "https://github.com/helloojohn",
+    github: "https://github.com/johokorie",
     linkedin: "https://linkedin.com/okoriejohn",
-    twitter: "https://twitter.com/"
+    twitter: "https://twitter.com/johokorie"
 };
 export {
     meta,
