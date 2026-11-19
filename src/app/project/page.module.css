@@ -1,0 +1,17 @@
+.projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: start; gap: 36px; }
+.project { position: relative; display: inline-block; width: 100%; margin: 0 0 36px; padding: 5px; border: 1px solid var(--foreground); background: var(--foreground); break-inside: avoid; }
+.image { display: block; width: 100%; height: 330px; object-fit: cover; object-position: left; }
+.placeholder { display: flex; flex-direction: column; justify-content: space-between; min-height: 390px; padding: 28px; background: #292925; color: #efefe9; }
+.placeholder span:first-child { font-size: 14px; letter-spacing: 3px; }
+.placeholder span:last-child { font-family: Georgia, serif; font-size: clamp(32px, 3.5vw, 52px); line-height: 1.1; }
+.alternate { min-height: 300px; background: #d3d3ca; color: #242421; }
+.content { position: absolute; inset: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; background: var(--overlay); color: var(--foreground); opacity: 0; text-align: center; transition: opacity 240ms ease; }
+.project:hover .content, .project:focus-within .content { opacity: 1; }
+.content h2 { margin-bottom: 12px; font-size: 24px; }
+.content p { font-size: 15px; }
+.content a { display: inline-block; padding: 6px 12px; border: 1px solid var(--foreground); font-size: 14px; text-decoration: none; }
+.content a:hover { background: var(--foreground); color: var(--background); }
+.comingSoon { color: var(--muted); font-size: 13px; }
+@media (max-width: 1100px) { .projects { gap: 22px; } .content { padding: 14px; } }
+@media (max-width: 767px) { .projects { grid-template-columns: 1fr; } .image { height: auto; } .placeholder { min-height: 230px; } .content { position: static; padding: 24px 16px; opacity: 1; background: var(--background); } .placeholder span:last-child { font-size: 44px; } }
+@media (hover: none) { .content { position: static; opacity: 1; background: var(--background); } }

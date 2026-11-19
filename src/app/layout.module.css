@@ -1,0 +1,1 @@
+.main { min-height: 60vh; }.skipLink { position:fixed;top:10px;left:20px;z-index:40;padding:10px 20px;background:var(--foreground);color:var(--background);transform:translateY(-160%); }.skipLink:focus { transform:translateY(0); }

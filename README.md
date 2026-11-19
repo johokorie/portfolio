@@ -1,35 +1,46 @@
-### Description
+# John’s portfolio
 
-A simple portfolio template for Computer Science  professionals built with React.
+A responsive portfolio built with Next.js App Router and CSS Modules. The home,
+about, projects, and contact pages are exported as static HTML for Netlify.
 
+## Development
 
+Use Node.js 22 or newer and Yarn 1.x.
 
-### Setup
+```sh
+yarn install
+yarn dev
+```
 
-**Install the git repo**
+Open http://localhost:3000. To use Netlify’s local environment instead:
 
-<pre>git clone https://github.com/johokorie/portfolio.git</pre>
+```sh
+netlify dev --port 8889
+```
 
-**Install yarn**
+Run `yarn lint` to check the source. Run `yarn build` to create the production
+site in `out/`. Netlify uses the build command and publish directory in
+`netlify.toml`.
 
-Install yarn to test and build the website. You can use the link [here](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable).
+## Content and styling
 
-**Install required dependencies**
+Edit `src/content_option.js` to update the introduction, biography, experience,
+skills, and contact details. Routes live in `src/app/`; shared components live
+in `src/components/`. Each page and component uses a `.module.css` stylesheet.
+Global CSS contains only the reset, theme variables, and accessibility defaults.
+The theme choice is saved in the browser and restored before the page paints.
 
-<pre>yarn install</pre>
+The Bridge project uses the existing local screenshot. The other two original
+placeholder projects are marked as coming soon. Add real project content and
+destinations in `src/app/project/page.js` when available.
 
-**Start the server**
+## Contact form
 
-<pre>yarn start</pre>
+The contact form uses Netlify Forms and requires no third-party email keys.
+`public/__forms.html` declares its fields for detection at deployment; keep
+those names in sync with `src/components/ContactForm.js`. The form submits
+URL-encoded data to that static file and includes a honeypot, pending state,
+success confirmation, and retryable error state.
 
-**Build the web-page**
-
-<pre>yarn build</pre>
-
-### More
-
-Modify pages content in  `src/content_option.js`.
-
-### Thanks!
-
-Like the page? Leave a ⭐!
+Submissions are processed on Netlify after deployment. Local development can
+verify rendering and submission states but does not deliver real submissions.

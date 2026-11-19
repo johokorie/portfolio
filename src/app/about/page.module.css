@@ -1,0 +1,16 @@
+.bio { padding-top: 16px; }
+.timeline { min-width: 0; }
+.table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+.table th, .table td { padding: 16px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.table th { padding-left: 0; font-weight: 700; }
+.table td:last-child { padding-right: 0; text-align: right; white-space: nowrap; }
+.caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 20px; padding: 0; margin: 0; list-style: none; }
+.skill { display: flex; align-items: center; justify-content: center; min-height: 90px; padding: 14px; border: 3px solid var(--foreground); text-align: center; font-size: 15px; font-weight: 700; transition: transform 180ms ease, box-shadow 180ms ease; }
+.skill:hover { transform: translateY(-5px); box-shadow: 0 4px 0 var(--accent); }
+@media (max-width: 991px) { .bio { padding-top: 0; } }
+@media (max-width: 480px) {
+  .table { font-size: 12px; }
+  .table th, .table td { padding: 14px 5px; }
+  .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+}

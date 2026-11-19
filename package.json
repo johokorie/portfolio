@@ -1,47 +1,33 @@
 {
-    "name": "react-portfolio",
-    "version": "0.1.0",
+    "name": "john-portfolio",
+    "version": "1.0.0",
     "private": true,
+    "workspaces": ["cms"],
     "dependencies": {
-        "bootstrap": "^5.2.3",
-        "emailjs-com": "^3.2.0",
-        "keyboard-css": "^1.2.4",
-        "react": "^18.2.0",
-        "react-bootstrap": "^2.7.0",
-        "react-dom": "^18.2.0",
-        "react-helmet-async": "^1.0.7",
-        "react-icons": "^4.1.0",
-        "react-particles": "^2.12.2",
-        "react-router-dom": "^6.6.2",
-        "react-scripts": "^5.0.1",
-        "react-transition-group": "^4.4.2",
-        "typewriter-effect": "^2.18.2",
-        "web-vitals": "^3.1.1"
+        "next": "16.4.6",
+        "react": "19.3.1",
+        "react-dom": "19.3.1",
+        "react-icons": "^5.5.0"
+        ,"@netlify/database": "^2.0.3",
+        "@netlify/blobs": "^10.0.0",
+        "drizzle-orm": "1.0.0-beta.22"
     },
     "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "predeploy": "yarn build && cp build/index.html build/404.html",
-        "deploy": "gh-pages -d build"
+        "dev": "next dev --hostname 0.0.0.0",
+        "start": "next dev --hostname 0.0.0.0",
+        "build": "yarn workspace portfolio-cms build && next build",
+        "cms:dev": "yarn workspace portfolio-cms develop",
+        "lint": "eslint .",
+        "test": "node --test tests/*.test.mjs",
+        "db:generate": "drizzle-kit generate"
     },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
+    "devDependencies": {
+        "eslint": "^9.39.1",
+        "eslint-config-next": "16.4.6",
+        "typescript": "^5.9.3",
+        "drizzle-kit": "1.0.0-beta.22"
     },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
+    "engines": {
+        "node": ">=24.0.0 <=26.x.x"
     }
 }

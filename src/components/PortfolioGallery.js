@@ -1,0 +1,8 @@
+"use client";
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import bridge from "@/assets/images/Bridge.png";
+import { dataportfolio } from "@/content_option";
+import styles from "./PortfolioGallery.module.css";
+export default function PortfolioGallery(){const [filter,setFilter]=useState("All");const projects=dataportfolio.filter((_,i)=>filter==="All"||(filter==="Finance"?i===0:i>0));return <><div className={styles.filters} role="group" aria-label="Filter projects">{["All","Finance","In progress"].map(name=><button key={name} type="button" aria-pressed={filter===name} onClick={()=>setFilter(name)}>{name}</button>)}</div><div className={styles.grid}>{projects.map(project=>{const i=dataportfolio.indexOf(project);return <article className={styles.card} key={project.title}>{i===0?<Link href="/project/bridge" className={styles.visual} aria-label="View Bridge project"><div className={styles.bridgeFrame}><Image src={bridge} alt="Bridge financial dashboard" sizes="(max-width:767px) 90vw,45vw" /></div><span className={styles.projectArrow} aria-hidden="true">↗</span></Link>:<div className={`${styles.visual} ${i===2?styles.pale:styles.study}`}><span className={styles.studyNumber}>0{i+1}</span><p>Less,<br/>but better.</p><span className={styles.studyLabel}>Work in progress</span></div>}<div className={styles.tags}><span>{i===0?"Frontend development":"Project study"}</span><span>{i===0?"Finance":"Coming soon"}</span></div><div className={styles.caption}><div><span>Project</span><h3>{project.title}</h3></div><p>{project.description}</p></div></article>})}</div></>}

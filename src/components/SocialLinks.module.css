@@ -1,0 +1,13 @@
+.rail { position: fixed; top: 50%; left: 30px; z-index: 5; display: flex; flex-direction: column; align-items: center; gap: 30px; transform: translateY(-50%); }
+.rail ul { display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.rail a { display: grid; place-items: center; min-width: 28px; min-height: 28px; font-size: 18px; transition: color 180ms ease, transform 180ms ease; }
+.rail a:hover { color: var(--accent); transform: translateY(-2px); }
+.label { display: flex; align-items: center; gap: 16px; writing-mode: vertical-rl; transform: rotate(180deg); font-size: 12px; font-weight: 600; }
+.label::before { content: ""; width: 1px; height: 40px; background: var(--foreground); }
+
+@media (max-width: 991px) {
+  .rail { position: static; flex-direction: row-reverse; justify-content: center; transform: none; padding: 40px 0; gap: 24px; }
+  .rail ul { flex-direction: row; }
+  .label { writing-mode: horizontal-tb; transform: none; font-size: 14px; }
+  .label::before { height: 1px; width: 30px; }
+}

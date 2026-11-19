@@ -1,0 +1,12 @@
+[build]
+  command = "yarn run build"
+  publish = "out"
+
+[dev]
+  command = "yarn dev"
+  targetPort = 3000
+  port = 8889
+  framework = "next"
+
+[server]
+  includedFiles = ["cms/config/**", "cms/src/**", "cms/build/**", "cms/package.json", "cms/providers/**", "db/**"]
