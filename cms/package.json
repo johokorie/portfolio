@@ -1,0 +1,18 @@
+{
+  "name": "portfolio-cms",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": { "develop": "strapi develop", "build": "strapi build", "start": "strapi start" },
+  "dependencies": {
+    "@strapi/strapi": "5.63.0",
+    "@netlify/database": "^2.0.3",
+    "@netlify/blobs": "^10.0.0",
+    "pg": "^8.16.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "^6.30.3",
+    "styled-components": "^6.1.19"
+  },
+  "engines": { "node": ">=24.0.0 <=26.x.x" },
+  "strapi": { "uuid": "portfolio-john-cms" }
+}

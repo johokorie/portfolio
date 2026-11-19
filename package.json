@@ -2,24 +2,32 @@
     "name": "john-portfolio",
     "version": "1.0.0",
     "private": true,
+    "workspaces": ["cms"],
     "dependencies": {
         "next": "16.4.6",
         "react": "19.3.1",
         "react-dom": "19.3.1",
         "react-icons": "^5.5.0"
+        ,"@netlify/database": "^2.0.3",
+        "@netlify/blobs": "^10.0.0",
+        "drizzle-orm": "1.0.0-beta.22"
     },
     "scripts": {
         "dev": "next dev --hostname 0.0.0.0",
         "start": "next dev --hostname 0.0.0.0",
-        "build": "next build",
-        "lint": "eslint ."
+        "build": "yarn workspace portfolio-cms build && next build",
+        "cms:dev": "yarn workspace portfolio-cms develop",
+        "lint": "eslint .",
+        "test": "node --test tests/*.test.mjs",
+        "db:generate": "drizzle-kit generate"
     },
     "devDependencies": {
         "eslint": "^9.39.1",
         "eslint-config-next": "16.4.6",
-        "typescript": "^5.9.3"
+        "typescript": "^5.9.3",
+        "drizzle-kit": "1.0.0-beta.22"
     },
     "engines": {
-        "node": ">=22.0.0"
+        "node": ">=24.0.0 <=26.x.x"
     }
 }

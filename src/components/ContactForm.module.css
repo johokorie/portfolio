@@ -1,18 +1,1 @@
-.form { min-width: 0; }
-.fields { min-width: 0; padding: 0; border: 0; margin: 0; }
-.hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-.row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 26px; }
-.field label { font-size: 13px; font-weight: 600; }
-.field input, .field textarea { width: 100%; min-width: 0; padding: 18px 14px; border: 1px solid var(--foreground); border-radius: 0; background: var(--background); color: var(--foreground); }
-.field input::placeholder, .field textarea::placeholder { color: var(--muted); opacity: 1; }
-.field textarea { resize: vertical; min-height: 160px; }
-.submit { padding: 6px 24px; border: 2px solid var(--foreground); border-radius: 0; background: var(--background); color: var(--foreground); transition: color 180ms ease, background 180ms ease; }
-.submit:hover { background: var(--foreground); color: var(--background); }
-.fields:disabled { opacity: 0.65; }
-.fields:disabled .submit { cursor: wait; }
-.feedback { min-height: 35px; margin-top: 20px; }
-.feedback p { padding: 14px 16px; border: 1px solid var(--line); font-size: 14px; }
-.success { border-left: 3px solid #5da879 !important; }
-.error { border-left: 3px solid #d17e71 !important; }
-@media (max-width: 575px) { .row { grid-template-columns: 1fr; gap: 0; } }
+.form { min-width:0; }.fields { min-width:0;margin:0;padding:0;border:0; }.hidden { position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%); }.row { display:grid;grid-template-columns:1fr 1fr;gap:25px; }.field { display:flex;flex-direction:column;gap:12px;margin-bottom:30px; }.field label { font-size:10px;text-transform:uppercase; }.field input,.field textarea { width:100%;min-width:0;padding:15px 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;color:var(--foreground);font-size:14px; }.field input::placeholder,.field textarea::placeholder { color:var(--muted);opacity:1; }.field textarea { min-height:150px;resize:vertical; }.submit { display:flex;justify-content:space-between;width:100%;padding:14px 20px;border:1px solid var(--foreground);border-radius:0;background:var(--foreground);color:var(--background);font-size:11px;text-transform:uppercase; }.submit::after { content:'↗'; }.submit:hover { background:var(--accent);border-color:var(--accent);color:#fff; }.fields:disabled { opacity:.6; }.feedback { margin-top:20px;min-height:30px; }.feedback p { padding:14px;border:1px solid var(--line);font-size:12px; }.feedback .success { border-left:2px solid #87a58a; }.feedback .error { border-left:2px solid var(--accent); }@media(max-width:575px) { .row { grid-template-columns:1fr;gap:0; } }

@@ -14,6 +14,14 @@
 /build
 /.next
 /out
+/cms/build
+/cms/dist
+/cms/.cache
+/cms/.strapi
+/cms/.tmp
+/cms/node_modules
+/cms/public/uploads/*
+/cms/.env*
 
 # misc
 .DS_Store
