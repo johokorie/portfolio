@@ -2,22 +2,20 @@ const logotext = " JOHN ";
 const meta = {
 	title: "John",
 	description:
-		"I'm John aka Panda, a passionate Frontend developer and technology enthuist.",
+		"I'm John aka Panda, a passionate frontend developer and technology enthusiast.",
 };
 
 const introdata = {
-	title: "Hi 👋, I'm John",
+	title: "Hi, I'm John",
 	animated: {
 		first: "Software Developer (Frontend)",
 		second: "Visionary",
 		third: "Problem-solver",
 		fourth: "Technologist",
 		fifth: "Curious",
-		// add more if you'd like but make sure to update /src/pages/home/index.js Line 29
 	},
 	description:
 		"Currently focused on building the future of web with modern technologies.",
-	your_img_url: "https://i.ibb.co/wRjcnGL/mlike React, TypeScript, and Tailwind CSS.e.jpg",
 };
 
 const dataabout = {
@@ -65,7 +63,7 @@ const skills = [
 	},
 
 	{
-		name: "Nextjs",
+		name: "Next.js",
 	},
 
 	{
@@ -105,38 +103,30 @@ const skills = [
 
 const dataportfolio = [
 	{
-		img: "https://ibb.co/CBnrqGs",
+		title: "Bridge",
 		description:
-			"Bridge is a modern platform that provide insights to optimize your financial strategy",
-		link: "#",
+			"Bridge is a modern platform that provides insights to optimize your financial strategy.",
 	},
 	{
-		img: "https://picsum.photos/800/?grayscale",
+		title: "Project study 01",
 		description:
 			"The wisdom of life consists in the elimination of non-essentials.",
-		link: "#",
 	},
 	{
-		img: "https://picsum.photos/800/?grayscale",
+		title: "Project study 02",
 		description:
 			"The wisdom of life consists in the elimination of non-essentials.",
-		link: "#",
 	},
 ];
 
 const contactConfig = {
     YOUR_EMAIL: "ameachijohn01@gmail.com",
     description: "Looking forward to hearing from you!",
-    // creat an emailjs.com account
-    // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "SERVICE_ID",
-    YOUR_TEMPLATE_ID: "TEMPLATE_ID",
-    YOUR_USER_ID: "USER_ID (PUBLIC_KEY)",
 };
 
 const socialprofils = {
     github: "https://github.com/johokorie",
-    linkedin: "https://linkedin.com/okoriejohn",
+    linkedin: "https://www.linkedin.com/in/okoriejohn/",
     twitter: "https://twitter.com/johokorie"
 };
 export {

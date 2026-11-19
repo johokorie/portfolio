@@ -1,0 +1,9 @@
+[build]
+  command = "yarn run build"
+  publish = "out"
+
+[dev]
+  command = "yarn dev"
+  targetPort = 3000
+  port = 8889
+  framework = "next"

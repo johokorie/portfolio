@@ -1,0 +1,21 @@
+.page { width: min(1140px, calc(100% - 180px)); margin: 0 auto; padding: 125px 0 60px; animation: enter 400ms ease both; }
+.heading { display: flex; align-items: baseline; justify-content: space-between; width: 66.6667%; margin-bottom: 64px; padding-bottom: 24px; border-bottom: 1px solid var(--line); gap: 20px; }
+.heading h1 { margin: 0; font-size: clamp(36px, 4.5vw, 56px); font-weight: 400; line-height: 1.2; letter-spacing: -1.5px; }
+.heading a { flex-shrink: 0; font-size: 14px; }
+.section { display: grid; grid-template-columns: 5fr 7fr; gap: 30px; margin-bottom: clamp(50px, 7vw, 112px); }
+.section h2 { padding-top: 16px; font-size: 26px; font-weight: 600; }
+.section p { margin-bottom: 0; }
+@keyframes enter { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 991px) {
+  .page { width: calc(100% - 50px); padding: 115px 0 20px; }
+  .heading { width: 100%; margin-bottom: 40px; }
+  .section { grid-template-columns: 1fr; gap: 12px; }
+  .section h2 { padding: 0; margin-bottom: 8px; }
+}
+
+@media (max-width: 480px) {
+  .page { width: calc(100% - 30px); }
+  .heading { gap: 12px; }
+  .heading h1 { font-size: 36px; }
+}
